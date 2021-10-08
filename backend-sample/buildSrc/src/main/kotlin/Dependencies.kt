@@ -15,7 +15,7 @@
  */
 
 object AppConfiguration {
-    const val group = "com.fernandocejas.kmp"
+    const val group = "com.fernandocejas.mpp"
     const val version = "1.0"
     const val mainClass = "io.ktor.server.netty.EngineMain"
     const val name = "ktor-api"

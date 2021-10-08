@@ -1,4 +1,4 @@
-package com.fernandocejas.kmp
+package com.fernandocejas.mpp
 
 import io.ktor.application.*
 import io.ktor.features.*

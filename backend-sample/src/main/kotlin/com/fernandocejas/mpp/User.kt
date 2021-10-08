@@ -1,4 +1,4 @@
-package com.fernandocejas.kmp
+package com.fernandocejas.mpp
 
 import kotlinx.serialization.Serializable
 
