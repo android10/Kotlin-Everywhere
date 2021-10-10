@@ -8,4 +8,4 @@ pluginManagement {
 
 rootProject.name = "kotlin-everywhere"
 include(":android-app")
-include(":shared-library")
+include(":shared")
