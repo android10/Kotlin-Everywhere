@@ -25,6 +25,9 @@
 
  - [Kotlin Multiplatform Official Documentation](https://kotlinlang.org/docs/mpp-intro.html)
  - [Different Approaches in Consuming KMM Modules](https://medium.com/wantedly-engineering/different-approaches-in-consuming-kmm-modules-in-ios-7957c722b114)
+ - [A Trip into Kotlin Native Multiplatform Projects](https://molo17.com/2019/02/a-trip-into-kotlin-native-multiplatform-projects-part-1/)
+ - [Kotlin Multiplatform Project for Android and iOS](https://www.raywenderlich.com/19144111-kotlin-multiplatform-project-for-android-and-ios-getting-started)
+ - [Maximizing Code Sharing between iOS and Android with KMM](https://dev.to/kuuurt/maximizing-code-sharing-between-android-and-ios-with-kotlin-multiplatform-54h8)
 
 ## License
 
