@@ -2,9 +2,7 @@
 
 **Kotlin Multiplatform Mobile:** this part includes a shared codebase (logic) that both iOS and Android projects are including.
 
-## General Architecture
-
- - TODO: Add an image here.
+![kmm-basic-project-structure](https://user-images.githubusercontent.com/1360604/136800752-eebfdb82-4b43-44cd-8a77-016dd30af645.png)
 
 ## Building and Running this project
 
@@ -22,6 +20,11 @@
 
  - You should use Xcode to work the iOS part on Swift (with AppCode is also possible).
  - Compilation and Run should work out of the box.
+
+## References
+
+ - [Kotlin Multiplatform Official Documentation](https://kotlinlang.org/docs/mpp-intro.html)
+ - [Different Approaches in Consuming KMM Modules](https://medium.com/wantedly-engineering/different-approaches-in-consuming-kmm-modules-in-ios-7957c722b114)
 
 ## License
 
