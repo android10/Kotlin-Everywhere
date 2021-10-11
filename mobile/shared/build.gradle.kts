@@ -21,6 +21,7 @@ kotlin {
             }
         }
     }
+
     sourceSets {
         val commonMain by getting
         val commonTest by getting {
@@ -42,10 +43,10 @@ kotlin {
 }
 
 android {
-    compileSdkVersion(31)
+    compileSdk = 31
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
-        minSdkVersion(26)
-        targetSdkVersion(31)
+        minSdk = 26
+        targetSdk = 31
     }
 }
