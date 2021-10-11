@@ -2,6 +2,7 @@ package com.fernandocejas.mpp
 
 import io.ktor.application.*
 import io.ktor.features.*
+import io.ktor.http.*
 import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.serialization.*
@@ -11,7 +12,12 @@ fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 fun Application.module() {
 
-    // Ktor Features
+    //TODO: This is to allowed calls from localhost
+    install(CORS) {
+        host("0.0.0.0:5000")
+        header(HttpHeaders.ContentType)
+    }
+
     install(ContentNegotiation) {
         json(Json {
             prettyPrint = true
@@ -19,7 +25,6 @@ fun Application.module() {
         })
     }
 
-    // Api Routes
     routing {
         get("/") {
             call.respondText("Hello Ktor Api: Query the endpoint /users")
