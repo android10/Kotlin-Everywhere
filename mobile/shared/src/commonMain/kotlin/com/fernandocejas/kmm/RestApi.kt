@@ -23,7 +23,7 @@ class RestApi {
 
     companion object {
         //Alias used by the emulator
-        const val usersUrl = "http://10.0.2.2:5000/users"
-//        const val usersUrl = "http://0.0.0.0:5000/users"
+//        const val usersUrl = "http://10.0.2.2:5000/users"
+        const val usersUrl = "http://0.0.0.0:5000/users"
     }
 }
