@@ -6,7 +6,14 @@ This is still a WIP but the idea is to create a tiny KOTLIN project that could b
  - iOS
  - Backend
 
-# General Architecture
+## Building and Running
+
+In order to build and run every project, refer to each specific sub project folder:
+ 
+ - [Backend](https://github.com/android10/Kotlin-Everywhere/tree/main/backend)
+ - [Mobile](https://github.com/android10/Kotlin-Everywhere/tree/main/mobile)
+
+## General Architecture
 
 ### Backend
 
