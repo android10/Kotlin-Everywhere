@@ -2,7 +2,9 @@
 
 **Kotlin Multiplatform Mobile:** this part includes a shared codebase (logic) that both iOS and Android projects are including.
 
-![kmm-basic-project-structure](https://user-images.githubusercontent.com/1360604/136800752-eebfdb82-4b43-44cd-8a77-016dd30af645.png)
+<p align="center">
+  <img width="640" height="400" src="https://user-images.githubusercontent.com/1360604/136800752-eebfdb82-4b43-44cd-8a77-016dd30af645.png">
+</p>
 
 ## Building and Running this project
 
