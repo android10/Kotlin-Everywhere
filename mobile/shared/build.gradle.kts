@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 //TODO: move version declaration to buildSrc
 object Versions {
     const val ktor = "1.6.3"
-    const val coroutines = "1.5.2"
+    const val coroutines = "1.5.2-native-mt"
 }
 
 plugins {
