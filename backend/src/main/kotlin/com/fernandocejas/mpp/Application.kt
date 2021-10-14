@@ -11,10 +11,8 @@ import kotlinx.serialization.json.Json
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 fun Application.module() {
-
-    //TODO: This is to allowed calls from localhost
     install(CORS) {
-        host("0.0.0.0:5000")
+        anyHost()
         header(HttpHeaders.ContentType)
     }
 
