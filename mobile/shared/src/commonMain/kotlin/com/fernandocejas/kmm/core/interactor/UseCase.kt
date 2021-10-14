@@ -1,3 +1,3 @@
 package com.fernandocejas.kmm.core.interactor
 
-class UseCase
+open class UseCase
