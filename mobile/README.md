@@ -1,4 +1,4 @@
-# KMM - Android and iOS
+# KMM - Android and iOS - WIP
 
 **Kotlin Multiplatform Mobile:** this part includes a shared codebase (logic) that both iOS and Android projects are including.
 
