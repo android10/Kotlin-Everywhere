@@ -1,3 +1,4 @@
+# Project General
 *.iml
 .gradle
 /local.properties
@@ -8,4 +9,7 @@
 /captures
 .externalNativeBuild
 .cxx
-local.properties
+local.propertises
+
+# iOS Application specifics
+/ios-app/ios-app.xcodeproj/xcuserdata/
