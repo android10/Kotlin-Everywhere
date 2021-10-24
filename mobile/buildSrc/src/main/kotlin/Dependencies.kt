@@ -15,15 +15,23 @@
  */
 
 object Kotlin {
-    const val std = "1.5.31"
-    const val ktor = "1.6.3"
-    const val coroutines = "1.5.2"
+    private object Versions {
+        const val std = "1.5.31"
+        const val ktor = "1.6.3"
+        const val coroutines = "1.5.2"
+    }
+
+    const val stdLib = "org.jetbrains.kotlin:kotlin-stdlib-common:${Versions.std}"
+    const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
 }
 
 object BuildPlugins {
     object Versions {
         const val gradleVersion = "7.2"
     }
+
+    const val androidApplication = "com.android.application"
+    const val kotlinAndroid = "android"
 }
 
 object ScriptPlugins {
@@ -31,9 +39,49 @@ object ScriptPlugins {
     const val infrastructure = "scripts.infrastructure"
 }
 
-object Libraries {
-    object Versions {}
+object Android {
+    const val applicationId = "com.fernandocejas.kmm.android"
+    const val minSdk = 26
+    const val compileSdk = 31
+    const val targetSdk = 31
 
-    const val kotlinStd          = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Kotlin.std}"
-    const val kotlinCoroutines   = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Kotlin.coroutines}"
+    object Projects {
+        const val shared = ":shared"
+    }
+
+    object Libraries {
+        private object Versions {
+            const val material = "1.4.0"
+            const val appCompat = "1.3.1"
+            const val constraintLayout = "2.1.1"
+        }
+
+        const val material = "com.google.android.material:material:${Versions.material}"
+        const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
+        const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    }
+
+    object TestLibraries {
+        private object Versions {}
+    }
+}
+
+object IOS {
+    object Libraries {
+        private object Versions {}
+    }
+
+    object TestLibraries {
+        private object Versions {}
+    }
+}
+
+object Shared {
+    object Libraries {
+        private object Versions {}
+    }
+
+    object TestLibraries {
+        private object Versions {}
+    }
 }

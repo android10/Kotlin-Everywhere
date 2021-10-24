@@ -16,21 +16,26 @@
 package scripts
 
 plugins {
-    id("application") apply false
+    id("com.android.application") apply false
+    id("kotlin-android") apply false
 }
 
-object Jvm {
-    const val TARGET = "1.8"
-    val SOURCE_COMPATIBILITY = JavaVersion.VERSION_1_8
-}
+android {
+    packagingOptions {
+        with(resources.excludes) {
+            add("LICENSE.txt")
+            add("META-INF/DEPENDENCIES")
+            add("META-INF/ASL2.0")
+            add("META-INF/NOTICE")
+        }
+    }
 
-val compileKotlin: org.jetbrains.kotlin.gradle.tasks.KotlinCompile by tasks
-val compileTestKotlin: org.jetbrains.kotlin.gradle.tasks.KotlinCompile by tasks
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
 
-compileKotlin.kotlinOptions { jvmTarget = Jvm.TARGET }
-compileTestKotlin.kotlinOptions { jvmTarget = Jvm.TARGET }
-
-java {
-    sourceCompatibility = Jvm.SOURCE_COMPATIBILITY
-    targetCompatibility = Jvm.SOURCE_COMPATIBILITY
+    testOptions {
+        animationsDisabled = true
+    }
 }
