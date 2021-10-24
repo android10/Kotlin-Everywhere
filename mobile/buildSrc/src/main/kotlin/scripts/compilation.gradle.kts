@@ -15,22 +15,22 @@
  */
 package scripts
 
-//plugins {
-//    id("application") apply false
-//}
-//
-//object Jvm {
-//    const val TARGET = "1.8"
-//    val SOURCE_COMPATIBILITY = JavaVersion.VERSION_1_8
-//}
-//
-//val compileKotlin: org.jetbrains.kotlin.gradle.tasks.KotlinCompile by tasks
-//val compileTestKotlin: org.jetbrains.kotlin.gradle.tasks.KotlinCompile by tasks
-//
-//compileKotlin.kotlinOptions { jvmTarget = Jvm.TARGET }
-//compileTestKotlin.kotlinOptions { jvmTarget = Jvm.TARGET }
-//
-//java {
-//    sourceCompatibility = Jvm.SOURCE_COMPATIBILITY
-//    targetCompatibility = Jvm.SOURCE_COMPATIBILITY
-//}
+plugins {
+    id("application") apply false
+}
+
+object Jvm {
+    const val TARGET = "1.8"
+    val SOURCE_COMPATIBILITY = JavaVersion.VERSION_1_8
+}
+
+val compileKotlin: org.jetbrains.kotlin.gradle.tasks.KotlinCompile by tasks
+val compileTestKotlin: org.jetbrains.kotlin.gradle.tasks.KotlinCompile by tasks
+
+compileKotlin.kotlinOptions { jvmTarget = Jvm.TARGET }
+compileTestKotlin.kotlinOptions { jvmTarget = Jvm.TARGET }
+
+java {
+    sourceCompatibility = Jvm.SOURCE_COMPATIBILITY
+    targetCompatibility = Jvm.SOURCE_COMPATIBILITY
+}
