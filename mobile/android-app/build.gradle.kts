@@ -35,9 +35,9 @@ android {
 }
 
 dependencies {
-    implementation(project(Android.Projects.shared))
-    implementation(Kotlin.stdLib)
-    implementation(Kotlin.coroutines)
+    implementation(project(":${Projects.shared}"))
+    implementation(Kotlin.Libraries.stdLib)
+    implementation(Kotlin.Libraries.coroutines)
     implementation(Android.Libraries.material)
     implementation(Android.Libraries.appCompat)
     implementation(Android.Libraries.constraintLayout)

@@ -1,15 +1,24 @@
+/**
+ * Copyright (C) 2021 Fernando Cejas Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
-//TODO: move version declaration to buildSrc
-object Versions {
-    const val ktor = "1.6.3"
-    const val coroutines = "1.5.2-native-mt"
-}
-
 plugins {
-    kotlin("multiplatform")
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.6.0-M1"
-    id("com.android.library")
+    kotlin(BuildPlugins.kotlinMultiPlatform)
+    id(BuildPlugins.kotlinSerialization) version BuildPlugins.Versions.kotlinSerialization
+    id(BuildPlugins.androidLibrary)
 }
 
 kotlin {
@@ -24,7 +33,7 @@ kotlin {
     iosTarget("ios") {
         binaries {
             framework {
-                baseName = "shared"
+                baseName = Projects.shared
             }
         }
     }
@@ -32,36 +41,36 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation("org.jetbrains.kotlin:kotlin-stdlib-common")
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
-                implementation("io.ktor:ktor-client-core:${Versions.ktor}")
+                implementation(Kotlin.Libraries.stdLib)
+                implementation(Kotlin.Libraries.coroutines)
+                implementation(Kotlin.Libraries.ktorClient)
+                implementation(Kotlin.Libraries.serialization)
             }
         }
         val commonTest by getting {
             dependencies {
-                implementation(kotlin("test-common"))
-                implementation(kotlin("test-annotations-common"))
+                implementation(kotlin(Kotlin.TestLibraries.testCommon))
+                implementation(kotlin(Kotlin.TestLibraries.testAnnotationCommon))
             }
         }
 
         val androidMain by getting {
             dependencies {
-                implementation("androidx.core:core-ktx:1.6.0")
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}")
-                implementation("io.ktor:ktor-client-android:${Versions.ktor}")
+                implementation(Android.Libraries.coreKtx)
+                implementation(Android.Libraries.coroutines)
+                implementation(Android.Libraries.ktorClient)
             }
         }
         val androidTest by getting {
             dependencies {
-                implementation(kotlin("test-junit"))
-                implementation("junit:junit:4.13.2")
+                implementation(kotlin(Android.TestLibraries.testJunit))
+                implementation(Android.TestLibraries.jUnit)
             }
         }
 
         val iosMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-ios:${Versions.ktor}")
+                implementation(IOS.Libraries.ktorClient)
             }
         }
         val iosTest by getting
@@ -69,10 +78,11 @@ kotlin {
 }
 
 android {
-    compileSdk = 31
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
+
+    compileSdk = Android.compileSdk
     defaultConfig {
-        minSdk = 26
-        targetSdk = 31
+        minSdk = Android.minSdk
+        targetSdk = Android.targetSdk
     }
 }

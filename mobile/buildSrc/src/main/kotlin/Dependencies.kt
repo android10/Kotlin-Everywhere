@@ -15,28 +15,46 @@
  */
 
 object Kotlin {
-    private object Versions {
+    object Versions {
         const val std = "1.5.31"
         const val ktor = "1.6.3"
-        const val coroutines = "1.5.2"
+        const val coroutines = "1.5.2-native-mt"
+        const val serialization = "1.2.2"
     }
 
-    const val stdLib = "org.jetbrains.kotlin:kotlin-stdlib-common:${Versions.std}"
-    const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+    object Libraries {
+        const val stdLib = "org.jetbrains.kotlin:kotlin-stdlib-common:${Versions.std}"
+        const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+        const val ktorClient = "io.ktor:ktor-client-core:${Versions.ktor}"
+        const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.serialization}"
+    }
+
+    object TestLibraries {
+        const val testCommon = "test-common"
+        const val testAnnotationCommon = "test-annotations-common"
+    }
 }
 
 object BuildPlugins {
     object Versions {
         const val gradleVersion = "7.2"
+        const val kotlinSerialization = "1.6.0-M1"
     }
 
     const val androidApplication = "com.android.application"
+    const val androidLibrary = "com.android.library"
     const val kotlinAndroid = "android"
+    const val kotlinSerialization = "org.jetbrains.kotlin.plugin.serialization"
+    const val kotlinMultiPlatform = "multiplatform"
 }
 
 object ScriptPlugins {
     const val compilation = "scripts.compilation"
     const val infrastructure = "scripts.infrastructure"
+}
+
+object Projects {
+    const val shared = "shared"
 }
 
 object Android {
@@ -45,30 +63,45 @@ object Android {
     const val compileSdk = 31
     const val targetSdk = 31
 
-    object Projects {
-        const val shared = ":shared"
-    }
-
     object Libraries {
         private object Versions {
             const val material = "1.4.0"
             const val appCompat = "1.3.1"
             const val constraintLayout = "2.1.1"
+            const val coreKtx = "1.6.0"
+            const val coroutines = Kotlin.Versions.coroutines
+            const val ktor = Kotlin.Versions.ktor
         }
 
+        // Android App UI Layer
         const val material = "com.google.android.material:material:${Versions.material}"
         const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+
+        // Android Shared Logic
+        const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
+        const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+        const val ktorClient = "io.ktor:ktor-client-android:${Versions.ktor}"
     }
 
     object TestLibraries {
-        private object Versions {}
+        private object Versions {
+            const val jUnit = "5.8.1"
+        }
+
+        const val testJunit = "test-junit"
+        const val jUnit = "org.junit.jupiter:junit-jupiter-engine:${Versions.jUnit}"
     }
 }
 
 object IOS {
     object Libraries {
-        private object Versions {}
+        private object Versions {
+            const val ktor = Kotlin.Versions.ktor
+        }
+
+        //iOS Shared Logic
+        const val ktorClient = "io.ktor:ktor-client-ios:${Versions.ktor}"
     }
 
     object TestLibraries {
