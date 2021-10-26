@@ -28,11 +28,6 @@ object Kotlin {
         const val ktorClient = "io.ktor:ktor-client-core:${Versions.ktor}"
         const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.serialization}"
     }
-
-    object TestLibraries {
-        const val testCommon = "test-common"
-        const val testAnnotationCommon = "test-annotations-common"
-    }
 }
 
 object BuildPlugins {
@@ -116,6 +111,8 @@ object Shared {
             const val kluent = "1.68"
         }
 
+        const val testCommon = "test-common"
+        const val testAnnotationCommon = "test-annotations-common"
         const val kluent = "org.amshove.kluent:kluent:${Versions.kluent}"
     }
 }

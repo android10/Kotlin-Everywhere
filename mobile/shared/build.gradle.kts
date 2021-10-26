@@ -49,8 +49,8 @@ kotlin {
         }
         val commonTest by getting {
             dependencies {
-                implementation(kotlin(Kotlin.TestLibraries.testCommon))
-                implementation(kotlin(Kotlin.TestLibraries.testAnnotationCommon))
+                implementation(kotlin(Shared.TestLibraries.testCommon))
+                implementation(kotlin(Shared.TestLibraries.testAnnotationCommon))
                 implementation(Shared.TestLibraries.kluent)
             }
         }
