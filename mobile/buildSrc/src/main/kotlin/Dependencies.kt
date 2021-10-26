@@ -85,12 +85,9 @@ object Android {
     }
 
     object TestLibraries {
-        private object Versions {
-            const val jUnit = "5.8.1"
-        }
+        private object Versions {}
 
         const val testJunit = "test-junit"
-        const val jUnit = "org.junit.jupiter:junit-jupiter-engine:${Versions.jUnit}"
     }
 }
 
@@ -115,6 +112,10 @@ object Shared {
     }
 
     object TestLibraries {
-        private object Versions {}
+        private object Versions {
+            const val kluent = "1.68"
+        }
+
+        const val kluent = "org.amshove.kluent:kluent:${Versions.kluent}"
     }
 }

@@ -51,6 +51,7 @@ kotlin {
             dependencies {
                 implementation(kotlin(Kotlin.TestLibraries.testCommon))
                 implementation(kotlin(Kotlin.TestLibraries.testAnnotationCommon))
+                implementation(Shared.TestLibraries.kluent)
             }
         }
 
@@ -64,7 +65,6 @@ kotlin {
         val androidTest by getting {
             dependencies {
                 implementation(kotlin(Android.TestLibraries.testJunit))
-                implementation(Android.TestLibraries.jUnit)
             }
         }
 
