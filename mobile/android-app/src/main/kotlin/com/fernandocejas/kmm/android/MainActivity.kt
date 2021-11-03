@@ -5,6 +5,9 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.fernandocejas.kmm.RestApi
+import com.fernandocejas.kmm.core.functional.getOrElse
+import com.fernandocejas.kmm.core.interactor.UseCase
+import com.fernandocejas.kmm.features.profile.interactor.GetProfile
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.GlobalScope
@@ -14,7 +17,6 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
 
     //TODO: Do not use the Global Scope
-    @DelicateCoroutinesApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,7 +24,12 @@ class MainActivity : AppCompatActivity() {
         val textView: TextView = findViewById(R.id.text_view)
         val editText: EditText = findViewById(R.id.edit_text)
 
-        GlobalScope.launch { loadUsers(textView, editText) }
+        val getProfile = GetProfile()
+        getProfile(UseCase.None()) {
+            textView.text = it.getOrElse("Failure")
+        }
+
+//        GlobalScope.launch { loadUsers(textView, editText) }
     }
 
     private fun loadUsers(textView: TextView, editText: EditText) {

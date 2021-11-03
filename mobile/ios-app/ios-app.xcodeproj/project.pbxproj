@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		ED21A2712732E344005DBF4B /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21A2702732E344005DBF4B /* ProfileModel.swift */; };
+		ED21A2752732E481005DBF4B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21A2742732E481005DBF4B /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,8 @@
 		7555FF7B242A565900829871 /* ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "ios-app/ContentView.swift"; sourceTree = SOURCE_ROOT; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED21A2702732E344005DBF4B /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		ED21A2742732E481005DBF4B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 		7555FF7D242A565900829871 /* ios-app */ = {
 			isa = PBXGroup;
 			children = (
+				ED21A2722732E3B1005DBF4B /* Core */,
+				ED21A26D2732E12D005DBF4B /* Features */,
 				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
@@ -81,7 +87,47 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = "shared";
+			path = shared;
+			sourceTree = "<group>";
+		};
+		ED21A26D2732E12D005DBF4B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				ED21A26F2732E14C005DBF4B /* Movies */,
+				ED21A26E2732E13C005DBF4B /* Profile */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		ED21A26E2732E13C005DBF4B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				ED21A2702732E344005DBF4B /* ProfileModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		ED21A26F2732E14C005DBF4B /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		ED21A2722732E3B1005DBF4B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ED21A2732732E3BD005DBF4B /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ED21A2732732E3BD005DBF4B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED21A2742732E481005DBF4B /* String+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,7 +160,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = orgName;
+				ORGANIZATIONNAME = "Fernando Cejas";
 				TargetAttributes = {
 					7555FF7A242A565900829871 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -174,6 +220,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED21A2752732E481005DBF4B /* String+Extensions.swift in Sources */,
+				ED21A2712732E344005DBF4B /* ProfileModel.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 			);

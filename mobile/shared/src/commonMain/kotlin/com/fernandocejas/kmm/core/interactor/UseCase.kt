@@ -15,6 +15,10 @@
  */
 package com.fernandocejas.kmm.core.interactor
 
+import com.fernandocejas.kmm.core.exception.Failure
+import com.fernandocejas.kmm.core.functional.Either
+import kotlinx.coroutines.*
+
 /**
  * Abstract class for a Use Case (Interactor in terms of Clean Architecture approach).
  * This abstraction represents an execution unit for different use cases (this means that any use
@@ -25,20 +29,30 @@ package com.fernandocejas.kmm.core.interactor
  */
 abstract class UseCase<out Type, in Params> where Type : Any {
 
-//    /**
-//     * The main function for the execution unit [UseCase]. It basically
-//     * follow the rules of a `Command Pattern`.
-//     *
-//     * Keep in mind that this function should not be called directly,
-//     * unless we want an asynchronous call, otherwise use the operator
-//     * by not calling explicitly this [UseCase.run] fn.
-//     *
-//     * @see [UseCase.invoke].
-//     */
-//    abstract fun run(params: Params): Either<Failure, Type>
-//
-//    suspend operator fun invoke(params: Params): Either<Failure, Type> =
-//        withContext(Dispatchers.Default) { run(params) }
+    /**
+     * The main function for the execution unit [UseCase]. It basically
+     * follow the rules of a `Command Pattern`.
+     *
+     * Keep in mind that this function should not be called directly,
+     * unless we want an asynchronous call, otherwise use the operator
+     * by not calling explicitly this [UseCase.run] fn.
+     *
+     * @see [UseCase.invoke].
+     */
+    abstract suspend fun run(params: Params): Either<Failure, Type>
+
+    operator fun invoke(
+        params: Params,
+        scope: CoroutineScope = GlobalScope,
+        onResult: (Either<Failure, Type>) -> Unit = {}
+    ) {
+        scope.launch(Dispatchers.Main) {
+            val deferred = async(Dispatchers.Default) {
+                run(params)
+            }
+            onResult(deferred.await())
+        }
+    }
 
     /**
      * Class that represents None (empty) parameters.
