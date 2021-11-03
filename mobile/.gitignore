@@ -13,3 +13,4 @@ local.propertises
 
 # iOS Application specifics
 /ios-app/ios-app.xcodeproj/xcuserdata/
+ios-app/ios-app.xcodeproj/project.xcworkspace/xcuserdata/
