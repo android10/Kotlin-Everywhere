@@ -3,23 +3,14 @@ import shared
 
 struct ContentView: View {
     
-    let greet = Greeting().greeting()
-    let user: Void = GetProfile().run(params: UseCaseNone(), completionHandler: simpleCompletionHandler)
+    @ObservedObject private var profileModel = ProfileViewModel(getProfile: GetProfile())
     
     var body: some View {
-        let text = Text(greet)
-		return text
-	}
-}
+        return Form {
+            Section { TextField("Name", text: $profileModel.name) }
+            Section { TextField("Email", text: $profileModel.email) }
 
-let simpleCompletionHandler:(EitherRight<NSString>?, Error?) -> Void = { user,error in
-    
-    let username = user?.b.self
-    print("From The Compleation handler: \(String(describing: username))")
-}
-
-struct ContentView_Previews: PreviewProvider {
-	static var previews: some View {
-		ContentView()
+            .onAppear(perform: { profileModel.fetch() })
+        }
 	}
 }
