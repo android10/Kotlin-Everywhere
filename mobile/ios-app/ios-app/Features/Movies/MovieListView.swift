@@ -6,4 +6,11 @@
 //  Copyright © 2021 Fernando Cejas. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
+
+struct MovieListView: View {
+    
+    var body: some View {
+       Text("The content of the Movie List")
+    }
+}
