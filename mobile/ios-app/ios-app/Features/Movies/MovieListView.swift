@@ -10,7 +10,17 @@ import SwiftUI
 
 struct MovieListView: View {
     
+    @ObservedObject private var movieListModel = MovieListModel()
+    
     var body: some View {
-       Text("The content of the Movie List")
+        NavigationView {
+            List {
+                ForEach(movieListModel.movies) { movie in
+                    Text("\(movie.poster)")
+                }
+            }
+            .navigationBarTitle("Movies", displayMode: .inline)
+            .onAppear(perform: { movieListModel.fetch() })
+        }
     }
 }
