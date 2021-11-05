@@ -17,6 +17,8 @@ struct MovieListView: View {
             List {
                 ForEach(movieListModel.movies) { movie in
                     Text("\(movie.poster)")
+//                    AsyncImage(url: URL(string: movie.poster))
+//                        .frame(width: 200, height: 200)
                 }
             }
             .navigationBarTitle("Movies", displayMode: .inline)
