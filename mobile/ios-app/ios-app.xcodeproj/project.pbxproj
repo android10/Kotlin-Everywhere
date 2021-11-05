@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
-		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		7555FF83242A565900829871 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* MainView.swift */; };
 		ED21A2712732E344005DBF4B /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21A2702732E344005DBF4B /* ProfileModel.swift */; };
 		ED21A2752732E481005DBF4B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21A2742732E481005DBF4B /* String+Extensions.swift */; };
 		ED21A27827340FDE005DBF4B /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21A27727340FDE005DBF4B /* Transformer.swift */; };
@@ -18,6 +18,7 @@
 		ED2F1A5C273531B2003A3423 /* MovieListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2F1A5B273531B2003A3423 /* MovieListModel.swift */; };
 		ED2F1A5E273531CA003A3423 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2F1A5D273531CA003A3423 /* MovieDetailsView.swift */; };
 		ED2F1A60273531DB003A3423 /* MovieDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2F1A5F273531DB003A3423 /* MovieDetailsModel.swift */; };
+		ED2F1A62273547D6003A3423 /* MoviesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2F1A61273547D6003A3423 /* MoviesRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "ios-app/ContentView.swift"; sourceTree = SOURCE_ROOT; };
+		7555FF82242A565900829871 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainView.swift; path = "ios-app/MainView.swift"; sourceTree = SOURCE_ROOT; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED21A2702732E344005DBF4B /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		ED21A2742732E481005DBF4B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		ED2F1A5B273531B2003A3423 /* MovieListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListModel.swift; sourceTree = "<group>"; };
 		ED2F1A5D273531CA003A3423 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
 		ED2F1A5F273531DB003A3423 /* MovieDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsModel.swift; sourceTree = "<group>"; };
+		ED2F1A61273547D6003A3423 /* MoviesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,7 @@
 			children = (
 				ED21A2722732E3B1005DBF4B /* Core */,
 				ED21A26D2732E12D005DBF4B /* Features */,
-				7555FF82242A565900829871 /* ContentView.swift */,
+				7555FF82242A565900829871 /* MainView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 			);
@@ -129,6 +131,7 @@
 				ED2F1A5B273531B2003A3423 /* MovieListModel.swift */,
 				ED2F1A5D273531CA003A3423 /* MovieDetailsView.swift */,
 				ED2F1A5F273531DB003A3423 /* MovieDetailsModel.swift */,
+				ED2F1A61273547D6003A3423 /* MoviesRouter.swift */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -266,8 +269,9 @@
 				ED21A27827340FDE005DBF4B /* Transformer.swift in Sources */,
 				ED2F1A5627352D74003A3423 /* ViewModel.swift in Sources */,
 				ED2F1A5A27353193003A3423 /* MovieListView.swift in Sources */,
+				ED2F1A62273547D6003A3423 /* MoviesRouter.swift in Sources */,
 				ED2F1A5827353132003A3423 /* ProfileView.swift in Sources */,
-				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				7555FF83242A565900829871 /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
