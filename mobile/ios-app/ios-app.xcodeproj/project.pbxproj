@@ -22,6 +22,7 @@
 		ED2F1A64273586B4003A3423 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2F1A63273586B4003A3423 /* Movie.swift */; };
 		ED2F1A66273586ED003A3423 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2F1A65273586ED003A3423 /* Profile.swift */; };
 		ED2F1A6827358847003A3423 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2F1A6727358847003A3423 /* MovieDetails.swift */; };
+		ED2F1A6A27358F2E003A3423 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2F1A6927358F2E003A3423 /* Int+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,7 @@
 		ED2F1A63273586B4003A3423 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		ED2F1A65273586ED003A3423 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		ED2F1A6727358847003A3423 /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
+		ED2F1A6927358F2E003A3423 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				ED21A2742732E481005DBF4B /* String+Extensions.swift */,
+				ED2F1A6927358F2E003A3423 /* Int+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				ED21A2752732E481005DBF4B /* String+Extensions.swift in Sources */,
 				ED2F1A66273586ED003A3423 /* Profile.swift in Sources */,
 				ED21A2712732E344005DBF4B /* ProfileModel.swift in Sources */,
+				ED2F1A6A27358F2E003A3423 /* Int+Extensions.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				ED2F1A5E273531CA003A3423 /* MovieDetailsView.swift in Sources */,
 				ED21A27827340FDE005DBF4B /* Transformer.swift in Sources */,
@@ -423,7 +427,7 @@
 					"-framework",
 					shared,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "orgIdentifier.ios-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fernandocejas.kmm.ios-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -447,7 +451,7 @@
 					"-framework",
 					shared,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "orgIdentifier.ios-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fernandocejas.kmm.ios-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

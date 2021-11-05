@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class MovieDetailsModel: ObservableObject {
+    
+    @Published var movieDetails: MovieDetails = MovieDetails()
+    
+    func fetch() {
+        movieDetails = MovieDetails()
+    }
+}
