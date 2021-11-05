@@ -13,6 +13,9 @@ class ProfileModel: ObservableObject {
     
     @Published var name = String.empty
     @Published var email = String.empty
+//
+//    @Published var data = String.empty
+//    @Published var error = String.empty
     
     private let getProfile: GetProfile
     init(getProfile: GetProfile) {
@@ -23,5 +26,9 @@ class ProfileModel: ObservableObject {
         getProfile.run(params: UseCaseNone(), completionHandler: { user,_ in
             self.name = user?.b?.capitalized ?? "TODO: Default Value"
         })
+    }
+    
+    func didChanged() {
+        print("TODO: Save profile")
     }
 }
