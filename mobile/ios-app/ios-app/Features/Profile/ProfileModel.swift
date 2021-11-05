@@ -1,5 +1,5 @@
 //
-//  ProfileViewModel.swift
+//  ProfileModel.swift
 //  ios-app
 //
 //  Created by Fernando Cejas on 03.11.21.
@@ -9,7 +9,7 @@
 import Foundation
 import shared
 
-class ProfileViewModel: ObservableObject {
+class ProfileModel: ObservableObject {
     
     @Published var name = String.empty
     @Published var email = String.empty
