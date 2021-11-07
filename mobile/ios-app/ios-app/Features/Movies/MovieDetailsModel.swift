@@ -12,7 +12,7 @@ class MovieDetailsModel: ObservableObject {
     
     @Published var movieDetails: MovieDetails = MovieDetails()
     
-    func fetch() {
+    func fetch(movieId: Int) {
         movieDetails = MovieDetails(
             id: 1,
             title: "300 Rise of an Empire",

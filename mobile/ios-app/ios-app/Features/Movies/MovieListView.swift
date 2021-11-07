@@ -19,7 +19,10 @@ struct MovieListView: View {
         ScrollView(.vertical) {
             LazyVGrid(columns: columns) {
                 ForEach(movieListModel.movies) { movie in
-                    MovieView(imageUrl: movie.poster)
+                    NavigationLink(
+                        destination: MovieDetailsView(movie: movie),
+                        label: { MovieView(imageUrl: movie.poster) }
+                    )
                 }
             }
         }
