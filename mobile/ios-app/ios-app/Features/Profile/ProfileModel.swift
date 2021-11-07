@@ -23,9 +23,11 @@ class ProfileModel: ObservableObject {
     }
     
     func fetch() {
-        getProfile.run(params: UseCaseNone(), completionHandler: { user,_ in
-            self.name = user?.b?.capitalized ?? "TODO: Default Value"
-        })
+//        getProfile.run(params: UseCaseNone(), completionHandler: { user,_ in
+//            self.name = user?.b?.capitalized ?? "TODO: Default Value"
+//        })
+        self.name = "Fernando Cejas"
+        self.email = "fcejas@gmail.com"
     }
     
     func didChanged() {

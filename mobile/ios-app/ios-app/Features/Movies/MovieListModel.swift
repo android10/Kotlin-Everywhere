@@ -14,21 +14,21 @@ class MovieListModel: ObservableObject {
     
     func fetch() {
         movies = [
-            Movie(id: 1, poster: "Ironman"),
-            Movie(id: 2, poster: "Batman"),
-            Movie(id: 3, poster: "Tor"),
-            Movie(id: 4, poster: "Hulk"),
-            Movie(id: 5, poster: "Captain America"),
-            Movie(id: 6, poster: "Superman"),
-            Movie(id: 7, poster: "Wonder Woman"),
-            Movie(id: 8, poster: "Captain Marvel"),
-            Movie(id: 9, poster: "Acquaman"),
-            Movie(id: 10, poster: "Black Panther"),
-            Movie(id: 11, poster: "Spiderman"),
-            Movie(id: 12, poster: "Venon"),
-            Movie(id: 13, poster: "Black Widow"),
-            Movie(id: 14, poster: "Doctor Strange"),
-            Movie(id: 15, poster: "Super Girl"),
+            Movie(id: 038001, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038001.jpg"),
+            Movie(id: 038002, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038002.jpg"),
+            Movie(id: 038003, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038003.jpg"),
+            Movie(id: 038004, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038004.jpg"),
+            Movie(id: 038005, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038005.jpg"),
+            Movie(id: 038006, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038006.jpg"),
+            Movie(id: 038007, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038007.jpg"),
+            Movie(id: 038008, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038008.jpg"),
+            Movie(id: 038009, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038009.jpg"),
+            Movie(id: 038010, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038010.jpg"),
+            Movie(id: 038011, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038011.jpg"),
+            Movie(id: 038012, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038012.jpg"),
+            Movie(id: 038013, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038013.jpg"),
+            Movie(id: 038014, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038014.jpg"),
+            Movie(id: 038015, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038015.jpg"),
         ]
     }
 }
