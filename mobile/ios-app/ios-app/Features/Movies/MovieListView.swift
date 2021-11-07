@@ -21,36 +21,13 @@ struct MovieListView: View {
                 ForEach(movieListModel.movies) { movie in
                     NavigationLink(
                         destination: MovieDetailsView(movie: movie),
-                        label: { MovieView(imageUrl: movie.poster) }
+                        label: { AsyncImageView(imageUrl: movie.poster) }
                     )
                 }
             }
         }
+//        .background(Color.black)
         .navigationTitle("Movies")
         .onAppear(perform: { movieListModel.fetch() })
-    }
-}
-
-struct MovieView: View {
-    
-    var imageUrl: String
-    
-    var body: some View {
-        AsyncImage(url: URL(string: imageUrl)) { phase in
-            switch phase {
-                case .empty:
-                    ProgressView()
-                case .success(let image):
-                    image.resizable()
-                         .aspectRatio(contentMode: .fit)
-                         .frame(maxWidth: 280, maxHeight: 280)
-                case .failure:
-                    Image(systemName: "photo")
-                @unknown default:
-                    EmptyView()
-            }
-        }
-        .cornerRadius(10)
-        .shadow(radius: 5)
     }
 }

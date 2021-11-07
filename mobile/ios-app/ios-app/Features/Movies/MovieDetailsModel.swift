@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class MovieDetailsModel: ObservableObject {
     
@@ -23,5 +24,11 @@ class MovieDetailsModel: ObservableObject {
             year: 2014,
             trailer: "https://www.youtube.com/watch?v=2zqy21Z29ps"
         )
+    }
+    
+    func playVideo(application: UIApplication) {
+        if let url = URL(string: movieDetails.trailer) {
+            application.open(url)
+        }
     }
 }

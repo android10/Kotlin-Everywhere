@@ -13,42 +13,60 @@ struct MovieDetailsView: View {
     let movie: Movie
     
     @ObservedObject private var movieDetailsModel = MovieDetailsModel()
-        
+    
     var body: some View {
-        ScrollView(.vertical) {
-            VStack {
-                MyView(imageUrl: self.movie.poster)
-                Section(header: Text("Director")) { Text(movieDetailsModel.movieDetails.director) }
-                Section(header: Text("Summary")) { Text(movieDetailsModel.movieDetails.summary) }
-            }
+        List {
+            AsyncImageView(imageUrl: movieDetailsModel.movieDetails.poster)
+                .opacity(0.7)
+                .overlay(PlayButtonOverlay(action: { movieDetailsModel.playVideo(application: UIApplication.shared) }), alignment: .center)
+                
+            MovieSection(title: "Summary", content: movieDetailsModel.movieDetails.summary)
+            MovieSection(title: "Cast", content: movieDetailsModel.movieDetails.cast)
+            MovieSection(title: "Director", content: movieDetailsModel.movieDetails.director)
+            MovieSection(title: "Year", content: String(movieDetailsModel.movieDetails.year))
         }
+        .frame(width: .infinity)
+        .listStyle(.insetGrouped)
         .navigationBarTitle(movieDetailsModel.movieDetails.title)
-        .onAppear(perform: { movieDetailsModel.fetch(movieId: self.movie.id) })
+        .onAppear(perform: { movieDetailsModel.fetch(movieId: movie.id) })
     }
-}
-
-struct MyView: View {
     
-    var imageUrl: String
-    
-    var body: some View {
-        AsyncImage(url: URL(string: imageUrl)) { phase in
-            switch phase {
-                case .empty:
-                    ProgressView()
-                case .success(let image):
-                    image.resizable()
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 300)
-                    .clipped()
-                    .listRowInsets(EdgeInsets())
-                case .failure:
-                    Image(systemName: "photo")
-                @unknown default:
-                    EmptyView()
+    struct MovieSection: View {
+        
+        let title: String
+        let content: String
+        
+        var body: some View {
+            Section(header: Text(title)) {
+                Text(content)
+                    .lineLimit(nil)
+                    .frame(maxHeight: .infinity)
             }
+            .headerProminence(.increased)
         }
-        .shadow(radius: 5)
+    }
+
+    struct PlayButtonOverlay: View {
+
+        let action: () -> Void
+        
+        var body: some View {
+            ZStack {
+                Button {
+                    action()
+                } label: {
+                    Image(systemName: "play.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding(10)
+                        .tint(.red)
+                }
+            }
+            .background(Color.black)
+            .frame(width: 50, height: 50)
+            .opacity(0.6)
+            .cornerRadius(8)
+            .padding(6)
+        }
     }
 }
