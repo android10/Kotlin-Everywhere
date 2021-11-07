@@ -9,12 +9,12 @@
 import Foundation
 
 struct MovieDetails {
-    let id = Int.invalid
-    let title = String.empty
-    let poster = String.empty
-    let summary = String.empty
-    let cast = String.empty
-    let director = String.empty
-    let year = Int.invalid
-    let trailer = String.empty
+    var id = Int.invalid
+    var title = String.empty
+    var poster = String.empty
+    var summary = String.empty
+    var cast = String.empty
+    var director = String.empty
+    var year = Int.invalid
+    var trailer = String.empty
 }
