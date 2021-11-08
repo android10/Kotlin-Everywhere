@@ -18,8 +18,8 @@ struct MovieDetailsView: View {
         List {
             AsyncImageView(imageUrl: movieDetailsModel.movieDetails.poster)
                 .opacity(0.7)
-                .overlay(PlayButtonOverlay(action: { movieDetailsModel.playVideo(application: UIApplication.shared) }), alignment: .center)
-                
+                .overlay(PlayButtonOverlay(action: { movieDetailsModel.playVideo(application: UIApplication.shared) }),
+                         alignment: .center)
             MovieSection(title: "Summary", content: movieDetailsModel.movieDetails.summary)
             MovieSection(title: "Cast", content: movieDetailsModel.movieDetails.cast)
             MovieSection(title: "Director", content: movieDetailsModel.movieDetails.director)
