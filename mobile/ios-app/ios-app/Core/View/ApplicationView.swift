@@ -7,3 +7,8 @@
 //
 
 import SwiftUI
+
+protocol ApplicationView: View {
+    
+//    @Environment(\.colorScheme) var colorScheme: ColorScheme
+}

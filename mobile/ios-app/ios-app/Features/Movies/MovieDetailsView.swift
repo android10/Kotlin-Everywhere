@@ -18,17 +18,17 @@ struct MovieDetailsView: View {
         List {
             AsyncImageView(imageUrl: movieDetailsModel.movieDetails.poster)
                 .opacity(0.7)
-                .overlay(PlayButtonOverlay(action: { movieDetailsModel.playVideo(application: UIApplication.shared) }),
+                .overlay(PlayButtonOverlay(action: { playVideo() }),
                          alignment: .center)
             MovieSection(title: "Summary", content: movieDetailsModel.movieDetails.summary)
             MovieSection(title: "Cast", content: movieDetailsModel.movieDetails.cast)
             MovieSection(title: "Director", content: movieDetailsModel.movieDetails.director)
             MovieSection(title: "Year", content: String(movieDetailsModel.movieDetails.year))
         }
-        .frame(width: .infinity)
         .listStyle(.insetGrouped)
         .navigationBarTitle(movieDetailsModel.movieDetails.title)
-        .onAppear(perform: { movieDetailsModel.fetch(movieId: movie.id) })
+        .onAppear(perform: { loadContent() })
+        .refreshable { loadContent() }
     }
     
     struct MovieSection: View {
@@ -68,5 +68,13 @@ struct MovieDetailsView: View {
             .cornerRadius(8)
             .padding(6)
         }
+    }
+    
+    private func loadContent() {
+        movieDetailsModel.fetch(movieId: movie.id)
+    }
+    
+    private func playVideo() {
+        movieDetailsModel.playVideo(application: UIApplication.shared)
     }
 }

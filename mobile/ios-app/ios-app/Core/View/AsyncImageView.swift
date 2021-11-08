@@ -16,7 +16,7 @@ struct AsyncImageView: View {
         AsyncImage(url: URL(string: imageUrl)) { phase in
             switch phase {
                 case .empty:
-                    ProgressView()
+                ProgressView().frame(alignment: .center)
                 case .success(let image):
                     image.resizable()
                          .scaledToFill()
@@ -24,12 +24,12 @@ struct AsyncImageView: View {
                          .listRowInsets(EdgeInsets())
                          .frame(height: 280)
                 case .failure:
-                    Image(systemName: "photo")
+                    Image(systemName: "photo").frame(alignment: .center)
                 @unknown default:
                     EmptyView()
             }
         }
         .cornerRadius(2)
-        .shadow(radius: 5)
+        .shadow(radius: 4)
     }
 }

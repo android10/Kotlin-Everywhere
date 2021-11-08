@@ -8,6 +8,10 @@
 
 import Foundation
 
-protocol ViewModel: ObservableObject {
-    func fetch()
+class ViewModel: ObservableObject {
+    @Published var error: Error?
+    
+    func publishError(message: String) {
+//        self.error = Error(message)
+    }
 }

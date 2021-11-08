@@ -16,7 +16,7 @@ struct MovieListView: View {
       Array(repeating: .init(.flexible()), count: 2)
     
     var body: some View {
-        ScrollView(.vertical) {
+        ScrollView(.vertical, showsIndicators: false) {
             LazyVGrid(columns: columns) {
                 ForEach(movieListModel.movies) { movie in
                     NavigationLink(
@@ -26,8 +26,12 @@ struct MovieListView: View {
                 }
             }
         }
-//        .background(Color.black)
         .navigationTitle("Movies")
-        .onAppear(perform: { movieListModel.fetch() })
+        .onAppear(perform: { loadContent() })
+        .refreshable { loadContent() }
+    }
+    
+    private func loadContent() {
+        movieListModel.fetch()
     }
 }

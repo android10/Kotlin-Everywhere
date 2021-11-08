@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MovieListModel: ObservableObject {
+class MovieListModel: ViewModel {
     
     @Published var movies: [Movie] = []
     
