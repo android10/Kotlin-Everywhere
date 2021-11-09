@@ -11,6 +11,7 @@ import SwiftUI
 struct MovieListView: View {
     
     @State var gridLayout: [GridItem] = [ GridItem() ]
+    @State var onlyImage = false
     
     @ObservedObject private var movieListModel = MovieListModel()
     
@@ -24,7 +25,8 @@ struct MovieListView: View {
                             CardView(
                                 imageUrl: movie.poster,
                                 header: String(movie.year),
-                                title: movie.title
+                                title: movie.title,
+                                onlyImage: $onlyImage
                             )
                         }
                     )
@@ -36,8 +38,8 @@ struct MovieListView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    self.gridLayout = Array(repeating: .init(.flexible()),
-                                            count: self.gridLayout.count % 2 + 1)
+                    self.gridLayout = Array(repeating: .init(.flexible()), count: self.gridLayout.count % 2 + 1)
+                    self.onlyImage.toggle()
                 }) {
                     ToolbarImage(imageName: "square.grid.2x2")
                 }

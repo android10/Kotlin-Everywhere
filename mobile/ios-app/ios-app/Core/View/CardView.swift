@@ -9,11 +9,13 @@
 import SwiftUI
 
 struct CardView: View {
-    
+        
     var imageUrl: String
     var header = String.empty
     var title = String.empty
     var subtitle = String.empty
+    
+    @Binding var onlyImage: Bool
     
     var body: some View {
         VStack {
@@ -40,6 +42,7 @@ struct CardView: View {
                 Spacer()
             }
             .padding()
+            .isHidden(onlyImage, remove: onlyImage)
         }
         .cornerRadius(10)
         .overlay(
