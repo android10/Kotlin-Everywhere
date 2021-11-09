@@ -12,12 +12,12 @@ struct MovieListView: View {
     
     @ObservedObject private var movieListModel = MovieListModel()
     
-    var columns: [GridItem] =
-      Array(repeating: .init(.flexible()), count: 2)
+    private var gridLayout: [GridItem] =
+        Array(repeating: .init(.flexible()), count: 2)
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            LazyVGrid(columns: columns) {
+        ScrollView(.vertical) {
+            LazyVGrid(columns: gridLayout) {
                 ForEach(movieListModel.movies) { movie in
                     NavigationLink(
                         destination: MovieDetailsView(movie: movie),
@@ -27,7 +27,7 @@ struct MovieListView: View {
             }
         }
         .navigationTitle("Movies")
-        .onAppear(perform: { loadContent() })
+        .onAppear { loadContent() }
         .refreshable { loadContent() }
     }
     

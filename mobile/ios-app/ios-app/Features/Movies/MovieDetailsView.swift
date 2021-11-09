@@ -18,8 +18,7 @@ struct MovieDetailsView: View {
         List {
             AsyncImageView(imageUrl: movieDetailsModel.movieDetails.poster)
                 .opacity(0.7)
-                .overlay(PlayButtonOverlay(action: { playVideo() }),
-                         alignment: .center)
+                .overlay(PlayButtonOverlay(clickAction: { playVideo() }), alignment: .center)
             MovieSection(title: "Summary", content: movieDetailsModel.movieDetails.summary)
             MovieSection(title: "Cast", content: movieDetailsModel.movieDetails.cast)
             MovieSection(title: "Director", content: movieDetailsModel.movieDetails.director)
@@ -27,7 +26,7 @@ struct MovieDetailsView: View {
         }
         .listStyle(.insetGrouped)
         .navigationBarTitle(movieDetailsModel.movieDetails.title)
-        .onAppear(perform: { loadContent() })
+        .onAppear { loadContent() }
         .refreshable { loadContent() }
     }
     
@@ -48,12 +47,12 @@ struct MovieDetailsView: View {
 
     struct PlayButtonOverlay: View {
 
-        let action: () -> Void
+        let clickAction: () -> Void
         
         var body: some View {
             ZStack {
                 Button {
-                    action()
+                    clickAction()
                 } label: {
                     Image(systemName: "play.fill")
                         .resizable()
