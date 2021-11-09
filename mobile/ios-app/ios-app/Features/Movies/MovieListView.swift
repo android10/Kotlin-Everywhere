@@ -10,10 +10,9 @@ import SwiftUI
 
 struct MovieListView: View {
     
-    @ObservedObject private var movieListModel = MovieListModel()
+    @State var gridLayout: [GridItem] = [ GridItem() ]
     
-    private var gridLayout: [GridItem] =
-        Array(repeating: .init(.flexible()), count: 2)
+    @ObservedObject private var movieListModel = MovieListModel()
     
     var body: some View {
         ScrollView(.vertical) {
@@ -21,12 +20,29 @@ struct MovieListView: View {
                 ForEach(movieListModel.movies) { movie in
                     NavigationLink(
                         destination: MovieDetailsView(movie: movie),
-                        label: { AsyncImageView(imageUrl: movie.poster) }
+                        label: {
+                            CardView(
+                                imageUrl: movie.poster,
+                                header: String(movie.year),
+                                title: movie.title
+                            )
+                        }
                     )
                 }
             }
         }
+        .animation(.interactiveSpring(), value: gridLayout.count)
         .navigationTitle("Movies")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    self.gridLayout = Array(repeating: .init(.flexible()),
+                                            count: self.gridLayout.count % 2 + 1)
+                }) {
+                    ToolbarImage(imageName: "square.grid.2x2")
+                }
+            }
+        }
         .onAppear { loadContent() }
         .refreshable { loadContent() }
     }

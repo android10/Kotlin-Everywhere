@@ -14,6 +14,8 @@
 		ED03644527383FAB008AF518 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED03644427383FAB008AF518 /* Logger.swift */; };
 		ED1808B527399E9600F99A7F /* Environment+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1808B427399E9600F99A7F /* Environment+Extensions.swift */; };
 		ED1808B72739A55100F99A7F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1808B62739A55100F99A7F /* View+Extensions.swift */; };
+		ED1808B9273A9E9E00F99A7F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1808B8273A9E9E00F99A7F /* CardView.swift */; };
+		ED1808BB273AD58B00F99A7F /* ToolbarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1808BA273AD58B00F99A7F /* ToolbarImage.swift */; };
 		ED21A2712732E344005DBF4B /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21A2702732E344005DBF4B /* ProfileModel.swift */; };
 		ED21A2752732E481005DBF4B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21A2742732E481005DBF4B /* String+Extensions.swift */; };
 		ED21A27827340FDE005DBF4B /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21A27727340FDE005DBF4B /* Transformer.swift */; };
@@ -53,6 +55,8 @@
 		ED03644427383FAB008AF518 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		ED1808B427399E9600F99A7F /* Environment+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+Extensions.swift"; sourceTree = "<group>"; };
 		ED1808B62739A55100F99A7F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		ED1808B8273A9E9E00F99A7F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		ED1808BA273AD58B00F99A7F /* ToolbarImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarImage.swift; sourceTree = "<group>"; };
 		ED21A2702732E344005DBF4B /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		ED21A2742732E481005DBF4B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		ED21A27727340FDE005DBF4B /* Transformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 			children = (
 				ED03643F27382822008AF518 /* AsyncImageView.swift */,
 				ED03644127383C6F008AF518 /* ApplicationView.swift */,
+				ED1808B8273A9E9E00F99A7F /* CardView.swift */,
+				ED1808BA273AD58B00F99A7F /* ToolbarImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 				ED2F1A66273586ED003A3423 /* Profile.swift in Sources */,
 				ED21A2712732E344005DBF4B /* ProfileModel.swift in Sources */,
 				ED2F1A6A27358F2E003A3423 /* Int+Extensions.swift in Sources */,
+				ED1808BB273AD58B00F99A7F /* ToolbarImage.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				ED2F1A5E273531CA003A3423 /* MovieDetailsView.swift in Sources */,
 				ED21A27827340FDE005DBF4B /* Transformer.swift in Sources */,
@@ -323,6 +330,7 @@
 				ED2F1A5827353132003A3423 /* ProfileView.swift in Sources */,
 				ED03644227383C6F008AF518 /* ApplicationView.swift in Sources */,
 				7555FF83242A565900829871 /* MainView.swift in Sources */,
+				ED1808B9273A9E9E00F99A7F /* CardView.swift in Sources */,
 				ED1808B527399E9600F99A7F /* Environment+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

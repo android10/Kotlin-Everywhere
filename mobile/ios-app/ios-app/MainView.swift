@@ -11,7 +11,7 @@ struct MainView: View {
                 Button {
                     showingProfile.toggle()
                 } label: {
-                    Label("User Profile", systemImage: "person.crop.circle")
+                    ToolbarImage(imageName: "person")
                 }
             }
             .sheet(isPresented: $showingProfile) {

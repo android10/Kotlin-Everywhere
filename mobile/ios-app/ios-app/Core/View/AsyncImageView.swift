@@ -22,11 +22,13 @@ struct AsyncImageView: View {
                          .scaledToFill()
                          .clipped()
                          .listRowInsets(EdgeInsets())
-                         .frame(height: 280)
+                         .frame(height: 250)
                 case .failure:
-                    Image(systemName: "photo").frame(alignment: .center)
+                    Image(systemName: "photo")
+                        .frame(height: 250, alignment: .center)
                 @unknown default:
                     EmptyView()
+                        .frame(height: 250, alignment: .center)
             }
         }
         .cornerRadius(2)
