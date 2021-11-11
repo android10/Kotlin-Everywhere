@@ -9,7 +9,6 @@
 import Foundation
 
 struct Profile: Identifiable {
-    
     let id = UUID()
     var name = String.empty
     var email = String.empty
