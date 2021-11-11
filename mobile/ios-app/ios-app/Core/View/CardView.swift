@@ -23,31 +23,22 @@ struct CardView: View {
             HStack {
                 VStack(alignment: .leading) {
                     Text(header)
-                        .font(.headline)
-                        .foregroundColor(.secondary)
+                        .headerStyle()
                         .isHidden(header.isEmpty, remove: header.isEmpty)
                     Text(title)
-                        .font(.title)
-                        .fontWeight(.black)
-                        .foregroundColor(.primary)
-                        .lineLimit(3)
+                        .titleStyle()
                         .isHidden(title.isEmpty, remove: title.isEmpty)
-                    Text(subtitle.uppercased())
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                        .isHidden(subtitle.isEmpty, remove: subtitle.isEmpty)
                 }
                 .layoutPriority(100)
- 
                 Spacer()
             }
             .padding()
             .isHidden(onlyImage, remove: onlyImage)
         }
-        .cornerRadius(10)
+        .cornerRadius(CornerRadius.medium)
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.1), lineWidth: 1)
+            RoundedRectangle(cornerRadius: CornerRadius.small)
+                .stroke(Color.lightGrey, lineWidth: LineWidth.small)
         )
         .padding([.top, .horizontal])
     }

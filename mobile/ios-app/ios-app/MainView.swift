@@ -3,6 +3,7 @@ import SwiftUI
 struct MainView: View {
     
     @State private var showingProfile = false
+    @State var loadingContent = false
 
     var body: some View {
         NavigationView {

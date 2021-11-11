@@ -10,6 +10,18 @@ import SwiftUI
 
 extension View {
     
+    func headerStyle() -> some View {
+        modifier(Header())
+    }
+    
+    func titleStyle() -> some View {
+        modifier(Title())
+    }
+    
+    func contentStyle() -> some View {
+        modifier(TextContent())
+    }
+    
     /// Prefixes the view with an icon.
     ///
     /// Example for visibility:

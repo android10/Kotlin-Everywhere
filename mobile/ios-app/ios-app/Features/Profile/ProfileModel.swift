@@ -11,11 +11,7 @@ import shared
 
 class ProfileModel: ObservableObject {
     
-    @Published var name = String.empty
-    @Published var email = String.empty
-//
-//    @Published var data = String.empty
-//    @Published var error = String.empty
+    @Published var profile = Profile()
     
     private let getProfile: GetProfile
     init(getProfile: GetProfile) {
@@ -23,11 +19,7 @@ class ProfileModel: ObservableObject {
     }
     
     func fetch() {
-//        getProfile.run(params: UseCaseNone(), completionHandler: { user,_ in
-//            self.name = user?.b?.capitalized ?? "TODO: Default Value"
-//        })
-        self.name = "Fernando Cejas"
-        self.email = "fcejas@gmail.com"
+        self.profile = Profile(name: "Fernando Cejas", email: "fcejas@gmail.com")
     }
     
     func didChanged() {

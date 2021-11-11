@@ -31,7 +31,6 @@ struct AsyncImageView: View {
                         .frame(height: 250, alignment: .center)
             }
         }
-        .cornerRadius(2)
-        .shadow(radius: 4)
+        .cornerRadius(CornerRadius.small)
     }
 }

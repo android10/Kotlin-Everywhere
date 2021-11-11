@@ -37,9 +37,7 @@ struct MovieDetailsView: View {
         
         var body: some View {
             Section(header: Text(title)) {
-                Text(content)
-                    .lineLimit(nil)
-                    .frame(maxHeight: .infinity)
+                Text(content).contentStyle()
             }
             .headerProminence(.increased)
         }
@@ -57,15 +55,15 @@ struct MovieDetailsView: View {
                     Image(systemName: "play.fill")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .padding(10)
+                        .padding(CornerRadius.medium)
                         .tint(.red)
                 }
             }
             .background(Color.black)
             .frame(width: 50, height: 50)
             .opacity(0.6)
-            .cornerRadius(8)
-            .padding(6)
+            .cornerRadius(CornerRadius.medium)
+            .padding(Padding.medium)
         }
     }
     

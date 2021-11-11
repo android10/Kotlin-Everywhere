@@ -18,8 +18,8 @@ struct ProfileView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section { TextField("Name", text: $profileModel.name) }
-                Section { TextField("Email", text: $profileModel.email) }
+                Section { TextField("Name", text: $profileModel.profile.name) }
+                Section { TextField("Email", text: $profileModel.profile.email) }
             }
             .disabled(!editMode)
             .navigationBarTitle("User Profile", displayMode: .inline)

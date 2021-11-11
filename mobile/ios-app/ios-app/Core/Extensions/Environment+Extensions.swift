@@ -19,3 +19,7 @@ import SwiftUI
 //        set { self[ThemeEnvironmentKey.self] = newValue }
 //    }
 //}
+
+private struct ThemeEnvironmentKey: EnvironmentKey {
+    static let defaultValue: String = "Default Theme"
+}
