@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MovieDetailsModel: ObservableObject {
+class MovieDetailsModel : ViewModel {
     
     @Published var movieDetails: MovieDetails = MovieDetails()
     

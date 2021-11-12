@@ -18,6 +18,8 @@
 		ED1808C6273BF45C00F99A7F /* ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1808C5273BF45C00F99A7F /* ios_appTests.swift */; };
 		ED1808CD273BF75C00F99A7F /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1808CC273BF75C00F99A7F /* Style.swift */; };
 		ED1808CF273D2A9B00F99A7F /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1808CE273D2A9B00F99A7F /* Color+Extensions.swift */; };
+		ED1808D2273D600100F99A7F /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1808D1273D600100F99A7F /* Failure.swift */; };
+		ED1808D4273E786200F99A7F /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1808D3273E786200F99A7F /* AppView.swift */; };
 		ED21A2712732E344005DBF4B /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21A2702732E344005DBF4B /* ProfileModel.swift */; };
 		ED21A2752732E481005DBF4B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21A2742732E481005DBF4B /* String+Extensions.swift */; };
 		ED21A27827340FDE005DBF4B /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21A27727340FDE005DBF4B /* Transformer.swift */; };
@@ -72,6 +74,8 @@
 		ED1808C5273BF45C00F99A7F /* ios_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_appTests.swift; sourceTree = "<group>"; };
 		ED1808CC273BF75C00F99A7F /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		ED1808CE273D2A9B00F99A7F /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		ED1808D1273D600100F99A7F /* Failure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failure.swift; sourceTree = "<group>"; };
+		ED1808D3273E786200F99A7F /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		ED21A2702732E344005DBF4B /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		ED21A2742732E481005DBF4B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		ED21A27727340FDE005DBF4B /* Transformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				ED03643F27382822008AF518 /* AsyncImageView.swift */,
+				ED1808D3273E786200F99A7F /* AppView.swift */,
 				ED1808B8273A9E9E00F99A7F /* CardView.swift */,
 				ED1808BA273AD58B00F99A7F /* ToolbarImage.swift */,
 			);
@@ -170,6 +175,14 @@
 				ED1808C5273BF45C00F99A7F /* ios_appTests.swift */,
 			);
 			path = "ios-appTests";
+			sourceTree = "<group>";
+		};
+		ED1808D0273D5FE700F99A7F /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				ED1808D1273D600100F99A7F /* Failure.swift */,
+			);
+			path = Exception;
 			sourceTree = "<group>";
 		};
 		ED2077E82713A8C6004523E7 /* shared */ = {
@@ -215,6 +228,7 @@
 		ED21A2722732E3B1005DBF4B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				ED1808D0273D5FE700F99A7F /* Exception */,
 				ED21A2732732E3BD005DBF4B /* Extensions */,
 				ED21A27627340FC3005DBF4B /* Mapper */,
 				ED2F1A5427352D60003A3423 /* Model */,
@@ -372,6 +386,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1808D2273D600100F99A7F /* Failure.swift in Sources */,
+				ED1808D4273E786200F99A7F /* AppView.swift in Sources */,
 				ED2F1A5C273531B2003A3423 /* MovieListModel.swift in Sources */,
 				ED2F1A60273531DB003A3423 /* MovieDetailsModel.swift in Sources */,
 				ED21A2752732E481005DBF4B /* String+Extensions.swift in Sources */,
@@ -537,7 +553,6 @@
 		7555FFA6242A565B00829871 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
@@ -561,7 +576,6 @@
 		7555FFA7242A565B00829871 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";

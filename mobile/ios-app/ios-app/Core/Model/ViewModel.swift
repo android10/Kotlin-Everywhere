@@ -8,10 +8,15 @@
 
 import Foundation
 
-class ViewModel: ObservableObject {
-    @Published var error: Error?
+class ViewModel : ObservableObject {
     
-    func publishError(message: String) {
-//        self.error = Error(message)
+    @Published var failure: Failure? = nil
+    
+    internal func publishFailure(failure: Failure) {
+        self.failure = failure
+    }
+    
+    internal func clearFailure() {
+        self.failure = nil
     }
 }
