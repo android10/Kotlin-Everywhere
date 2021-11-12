@@ -16,35 +16,33 @@ struct MovieListView: View {
     @ObservedObject private var movieListModel = MovieListModel()
     
     var body: some View {
-        AppView {
-            ScrollView(.vertical) {
-                LazyVGrid(columns: gridLayout) {
-                    ForEach(movieListModel.movies) { movie in
-                        NavigationLink(
-                            destination: MovieDetailsView(movie: movie),
-                            label: { CardView(imageUrl: movie.poster,
-                                              header: String(movie.year),
-                                              title: movie.title,
-                                              onlyImage: $onlyImage) }
-                        )
-                    }
+        ScrollView(.vertical) {
+            LazyVGrid(columns: gridLayout) {
+                ForEach(movieListModel.movies) { movie in
+                    NavigationLink(
+                        destination: MovieDetailsView(movie: movie),
+                        label: { CardView(imageUrl: movie.poster,
+                                          header: String(movie.year),
+                                          title: movie.title,
+                                          onlyImage: $onlyImage) }
+                    )
                 }
             }
-            .animation(.interactiveSpring(), value: gridLayout.count)
-            .navigationTitle("Movies")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        self.gridLayout = Array(repeating: .init(.flexible()), count: self.gridLayout.count % 2 + 1)
-                        self.onlyImage.toggle()
-                    }) {
-                        ToolbarImage(imageName: "square.grid.2x2")
-                    }
-                }
-            }
-            .onAppear { loadContent() }
-            .refreshable { loadContent() }
         }
+        .animation(.interactiveSpring(), value: gridLayout.count)
+        .navigationTitle("Movies")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    self.gridLayout = Array(repeating: .init(.flexible()), count: self.gridLayout.count % 2 + 1)
+                    self.onlyImage.toggle()
+                }) {
+                    ToolbarImage(imageName: "square.grid.2x2")
+                }
+            }
+        }
+        .onAppear { loadContent() }
+        .refreshable { loadContent() }
         .onFailure(viewModel: $movieListModel) { loadContent() }
     }
     

@@ -19,15 +19,4 @@ struct AppView<Content>: View where Content: View {
     var body : some View {
         content
     }
-    
-    public func onFailure<T: ViewModel>(viewModel:  ObservedObject<T>.Wrapper, retryAction: @escaping () -> Void) -> some View {
-        alert(item: viewModel.failure) { failure in
-            Alert(
-                title: Text(failure.title),
-                message: Text(failure.description),
-                primaryButton: .default(Text("Ok")),
-                secondaryButton: .default(Text("Retry"), action: { retryAction() })
-            )
-        }
-    }
 }

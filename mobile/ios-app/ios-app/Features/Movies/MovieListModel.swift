@@ -13,8 +13,6 @@ class MovieListModel: ViewModel {
     @Published var movies: [Movie] = []
     
     func fetch() {
-        publishFailure(failure: Failure(title: "Hello Title", description: "Hello Description"))
-        
         movies = [
             Movie(id: 038001, title: "300 Rise of an Empire", year: 2014, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038001.jpg"),
             Movie(id: 038002, title: "300 Rise of an Empire", year: 2014, poster: "https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/posters/038002.jpg"),

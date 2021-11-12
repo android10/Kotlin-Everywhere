@@ -28,6 +28,7 @@ struct MovieDetailsView: View {
         .navigationBarTitle(movieDetailsModel.movieDetails.title)
         .onAppear { loadContent() }
         .refreshable { loadContent() }
+        .onFailure(viewModel: $movieDetailsModel, retryAction: { loadContent() })
     }
     
     struct MovieSection: View {
