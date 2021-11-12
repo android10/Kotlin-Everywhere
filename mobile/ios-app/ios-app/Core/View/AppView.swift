@@ -20,9 +20,8 @@ struct AppView<Content>: View where Content: View {
         content
     }
     
-    public func onFailure(failure: Binding<Failure?>, retryAction: @escaping () -> Void) -> some View {
-        
-        alert(item: failure) { failure in
+    public func onFailure<T: ViewModel>(viewModel:  ObservedObject<T>.Wrapper, retryAction: @escaping () -> Void) -> some View {
+        alert(item: viewModel.failure) { failure in
             Alert(
                 title: Text(failure.title),
                 message: Text(failure.description),

@@ -45,7 +45,7 @@ struct MovieListView: View {
             .onAppear { loadContent() }
             .refreshable { loadContent() }
         }
-        .onFailure(failure: $movieListModel.failure) { loadContent() }
+        .onFailure(viewModel: $movieListModel) { loadContent() }
     }
     
     private func loadContent() {
