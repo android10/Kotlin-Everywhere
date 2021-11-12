@@ -1,6 +1,9 @@
+import Foundation
 import SwiftUI
 
 struct MainView: View {
+    
+    @Environment(\.router) var router: Router
     
     @State private var showingProfile = false
 
@@ -15,7 +18,7 @@ struct MainView: View {
                 }
             }
             .sheet(isPresented: $showingProfile) {
-                ProfileView()
+                router.navigateToProfile()
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())

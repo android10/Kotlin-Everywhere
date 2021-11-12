@@ -20,6 +20,7 @@
 		ED1808CF273D2A9B00F99A7F /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1808CE273D2A9B00F99A7F /* Color+Extensions.swift */; };
 		ED1808D2273D600100F99A7F /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1808D1273D600100F99A7F /* Failure.swift */; };
 		ED1808D4273E786200F99A7F /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1808D3273E786200F99A7F /* AppView.swift */; };
+		ED1808D9273EF20300F99A7F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1808D8273EF20300F99A7F /* Router.swift */; };
 		ED21A2712732E344005DBF4B /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21A2702732E344005DBF4B /* ProfileModel.swift */; };
 		ED21A2752732E481005DBF4B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21A2742732E481005DBF4B /* String+Extensions.swift */; };
 		ED21A27827340FDE005DBF4B /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21A27727340FDE005DBF4B /* Transformer.swift */; };
@@ -76,6 +77,7 @@
 		ED1808CE273D2A9B00F99A7F /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		ED1808D1273D600100F99A7F /* Failure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failure.swift; sourceTree = "<group>"; };
 		ED1808D3273E786200F99A7F /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		ED1808D8273EF20300F99A7F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		ED21A2702732E344005DBF4B /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		ED21A2742732E481005DBF4B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		ED21A27727340FDE005DBF4B /* Transformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
@@ -185,6 +187,14 @@
 			path = Exception;
 			sourceTree = "<group>";
 		};
+		ED1808D7273EF1E400F99A7F /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				ED1808D8273EF20300F99A7F /* Router.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		ED2077E82713A8C6004523E7 /* shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +238,7 @@
 		ED21A2722732E3B1005DBF4B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				ED1808D7273EF1E400F99A7F /* Navigation */,
 				ED1808D0273D5FE700F99A7F /* Exception */,
 				ED21A2732732E3BD005DBF4B /* Extensions */,
 				ED21A27627340FC3005DBF4B /* Mapper */,
@@ -390,6 +401,7 @@
 				ED1808D4273E786200F99A7F /* AppView.swift in Sources */,
 				ED2F1A5C273531B2003A3423 /* MovieListModel.swift in Sources */,
 				ED2F1A60273531DB003A3423 /* MovieDetailsModel.swift in Sources */,
+				ED1808D9273EF20300F99A7F /* Router.swift in Sources */,
 				ED21A2752732E481005DBF4B /* String+Extensions.swift in Sources */,
 				ED2F1A66273586ED003A3423 /* Profile.swift in Sources */,
 				ED21A2712732E344005DBF4B /* ProfileModel.swift in Sources */,

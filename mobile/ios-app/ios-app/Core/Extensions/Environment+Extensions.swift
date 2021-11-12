@@ -6,20 +6,17 @@
 //  Copyright © 2021 Fernando Cejas. All rights reserved.
 //
 
-import Foundation
 import SwiftUI
 
-//struct ThemeEnvironmentKey: EnvironmentKey {
-//    static var defaultValue = Theme.default
-//}
-//
-//extension EnvironmentValues {
-//    var theme: Theme {
-//        get { self[ThemeEnvironmentKey.self] }
-//        set { self[ThemeEnvironmentKey.self] = newValue }
-//    }
-//}
+struct RouterKey: EnvironmentKey {
+    static var defaultValue: Router {
+        Router()
+    }
+}
 
-private struct ThemeEnvironmentKey: EnvironmentKey {
-    static let defaultValue: String = "Default Theme"
+extension EnvironmentValues {
+    var router: Router {
+        get { return self[RouterKey.self]  }
+//        set { self[RouterKey.self] = newValue }
+    }
 }

@@ -10,6 +10,8 @@ import SwiftUI
 
 struct MovieListView: View {
     
+    @Environment(\.router) var router: Router
+    
     @State var gridLayout: [GridItem] = [ GridItem() ]
     @State var onlyImage = false
     
