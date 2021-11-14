@@ -10,11 +10,10 @@ import SwiftUI
 
 struct Router {
     
-    func navigateToProfile() -> some View {
-        ProfileView()
-    }
-
-    func navigateToMovieDetails() -> some View {
-        ProfileView()
-    }
+    static let shared = Router()
+    
+    let profile = ProfileRouter()
+    let movies = MoviesRouter()
+    
+    private init(){}
 }

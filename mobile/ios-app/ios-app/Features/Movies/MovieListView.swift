@@ -22,7 +22,7 @@ struct MovieListView: View {
             LazyVGrid(columns: gridLayout) {
                 ForEach(movieListModel.movies) { movie in
                     NavigationLink(
-                        destination: MovieDetailsView(movie: movie),
+                        destination: router.movies.openDetails(movie),
                         label: { CardView(imageUrl: movie.poster,
                                           header: String(movie.year),
                                           title: movie.title,

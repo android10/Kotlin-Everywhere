@@ -10,13 +10,12 @@ import SwiftUI
 
 struct RouterKey: EnvironmentKey {
     static var defaultValue: Router {
-        Router()
+        Router.shared
     }
 }
 
 extension EnvironmentValues {
     var router: Router {
         get { return self[RouterKey.self]  }
-//        set { self[RouterKey.self] = newValue }
     }
 }

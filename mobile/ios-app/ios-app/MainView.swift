@@ -18,7 +18,7 @@ struct MainView: View {
                 }
             }
             .sheet(isPresented: $showingProfile) {
-                router.navigateToProfile()
+                router.profile.openProfile()
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())

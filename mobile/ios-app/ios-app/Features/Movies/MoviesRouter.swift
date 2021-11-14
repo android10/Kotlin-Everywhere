@@ -6,4 +6,11 @@
 //  Copyright © 2021 Fernando Cejas. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
+
+struct MoviesRouter {
+    
+    func openDetails(_ movie: Movie) -> some View {
+        MovieDetailsView(movie: movie)
+    }
+}

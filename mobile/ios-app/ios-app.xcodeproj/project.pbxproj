@@ -35,6 +35,7 @@
 		ED2F1A66273586ED003A3423 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2F1A65273586ED003A3423 /* Profile.swift */; };
 		ED2F1A6827358847003A3423 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2F1A6727358847003A3423 /* MovieDetails.swift */; };
 		ED2F1A6A27358F2E003A3423 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2F1A6927358F2E003A3423 /* Int+Extensions.swift */; };
+		EDA29B082741A44B005D704D /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA29B072741A44B005D704D /* ProfileRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		ED2F1A65273586ED003A3423 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		ED2F1A6727358847003A3423 /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
 		ED2F1A6927358F2E003A3423 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		EDA29B072741A44B005D704D /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 				ED21A2702732E344005DBF4B /* ProfileModel.swift */,
 				ED2F1A5727353132003A3423 /* ProfileView.swift */,
 				ED2F1A65273586ED003A3423 /* Profile.swift */,
+				EDA29B072741A44B005D704D /* ProfileRouter.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				ED2F1A5627352D74003A3423 /* ViewModel.swift in Sources */,
 				ED2F1A64273586B4003A3423 /* Movie.swift in Sources */,
 				ED2F1A5A27353193003A3423 /* MovieListView.swift in Sources */,
+				EDA29B082741A44B005D704D /* ProfileRouter.swift in Sources */,
 				ED1808BE273BF06A00F99A7F /* Text.swift in Sources */,
 				ED03644027382822008AF518 /* AsyncImageView.swift in Sources */,
 				ED2F1A62273547D6003A3423 /* MoviesRouter.swift in Sources */,
