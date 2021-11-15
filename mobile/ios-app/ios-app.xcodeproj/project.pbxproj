@@ -37,6 +37,7 @@
 		EDA29B082741A44B005D704D /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA29B072741A44B005D704D /* ProfileRouter.swift */; };
 		EDAE5F512742972300036963 /* FailureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAE5F502742972300036963 /* FailureTests.swift */; };
 		EDAE5F582742AE3100036963 /* String+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAE5F572742AE3100036963 /* String+ExtensionsTests.swift */; };
+		EDAE5F5A2742B37E00036963 /* Int+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAE5F592742B37E00036963 /* Int+ExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		EDA29B072741A44B005D704D /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		EDAE5F502742972300036963 /* FailureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureTests.swift; sourceTree = "<group>"; };
 		EDAE5F572742AE3100036963 /* String+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExtensionsTests.swift"; sourceTree = "<group>"; };
+		EDAE5F592742B37E00036963 /* Int+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+ExtensionsTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,7 @@
 		EDAE5F562742AC8000036963 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				EDAE5F592742B37E00036963 /* Int+ExtensionsTests.swift */,
 				EDAE5F572742AE3100036963 /* String+ExtensionsTests.swift */,
 			);
 			path = Extension;
@@ -462,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDAE5F5A2742B37E00036963 /* Int+ExtensionsTests.swift in Sources */,
 				EDAE5F582742AE3100036963 /* String+ExtensionsTests.swift in Sources */,
 				EDAE5F512742972300036963 /* FailureTests.swift in Sources */,
 			);
