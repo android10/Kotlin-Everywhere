@@ -25,4 +25,18 @@ class ProfileModel: ObservableObject {
     func didChanged() {
         print("TODO: Save profile")
     }
+    
+    //    let something = GetProfile
+    //    let user: Void = GetProfile().run(params: UseCaseNone(), completionHandler: simpleCompletionHandler)
+    //
+    //
+//    let onCompletion: (EitherRight<UserProfile>) -> Void = { user,error in
+//
+//    }
+    
+    
+//    let simpleCompletionHandler:(EitherRight<NSString>?, Error?) -> Void = { user,error in
+//        let username = user?.b.self
+//        print("From The Compleation handler: \(String(describing: username))")
+//    }
 }

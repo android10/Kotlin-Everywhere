@@ -25,9 +25,9 @@ class MainActivity : AppCompatActivity() {
         val editText: EditText = findViewById(R.id.edit_text)
 
         val getProfile = GetProfile()
-        getProfile(UseCase.None()) {
-            textView.text = it.getOrElse("Failure")
-        }
+//        getProfile(UseCase.None()) {
+//            textView.text = it.getOrElse("Failure")
+//        }
 
 //        GlobalScope.launch { loadUsers(textView, editText) }
     }
